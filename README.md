@@ -23,7 +23,7 @@ let shots = try Index.search(Query(type: Kind.image.identifier,
 
 ## Measured
 
-| | |
+| Query | Time and hits |
 |---|---|
 | `blockQuoteLevel` inside every file in a home directory | **0.63 s**, 6 hits |
 | `*.swift` across a home directory | **0.09 s**, 7,924 hits |
@@ -62,7 +62,7 @@ measurement, and it cost a thirty-second timeout on a search that takes a tenth 
 
 Every part is optional and they combine with `AND`:
 
-| | |
+| Part | Matches |
 |---|---|
 | `name` | a filename **glob** — `*.swift`, `Screenshot*`. Not a regex; that is what Spotlight takes |
 | `content` | words inside the file |
